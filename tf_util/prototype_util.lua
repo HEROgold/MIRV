@@ -19,7 +19,7 @@ local rename_recipe = function(old, new)
     if recipe.result and recipe.result == old then
       recipe.result = new
     end
-    for k, product in pairs (recipe.products or {}) do
+    for k, product in pairs (recipe.results or {}) do
       if product.name and product.name == old then
         product.name = new
       end
@@ -74,7 +74,7 @@ local rename_recipe = function(old, new)
     if recipe.result and recipe.result == old then
       recipe.result = new
     end
-    for k, product in pairs (recipe.products or {}) do
+    for k, product in pairs (recipe.results or {}) do
       if product.name and product.name == old then
         product.name = new
       end
